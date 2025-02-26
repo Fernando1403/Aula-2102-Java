@@ -27,6 +27,5 @@ public class Main {
 		cadastro.ObterSaldo();
 		
 		System.exit(0);
-		
 	}
 }

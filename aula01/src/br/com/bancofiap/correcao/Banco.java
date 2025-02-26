@@ -14,17 +14,21 @@ public class Banco {
 	}
 
 
-	public Conta criar(String numero, String nome) {
+	public Conta criar(String numero, Cliente cliente, double saldo) {
 		
-		Conta conta = new Conta();
-		conta.setNumero(numero);
-		conta.setBanco(this);
+		Conta conta = new Conta(this, cliente, numero, saldo);
+		return conta;
+	}
+	
+	public ContaEspecial criar(String numero, Cliente cliente, double saldo, double limite) {
 		
-		Cliente cliente = new Cliente();
+		ContaEspecial conta = new ContaEspecial(this, cliente, numero, saldo, limite);
+		return conta;
+	}
+	
+	public ContaRemunerada criar(String numero, double taxaRemuneracao, Cliente cliente, double saldo) {
 		
-		cliente.setNome(nome);
-		conta.setCliente(cliente);
-		
+		ContaRemunerada conta = new ContaRemunerada(this, cliente, numero, saldo, taxaRemuneracao);
 		return conta;
 	}
 	

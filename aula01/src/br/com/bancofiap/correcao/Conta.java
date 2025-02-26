@@ -7,30 +7,27 @@ public class Conta {
 	private String numero;
 	private double saldo = 0.0;
 	
+	public Conta(Banco banco, Cliente cliente, String numero, double saldo) {
+		super();
+		this.banco = banco;
+		this.cliente = cliente;
+		this.numero = numero;
+		this.saldo = saldo;
+	}
 	
 	public Banco getBanco() {
 		return banco;
-	}
-
-	public void setBanco(Banco banco) {
-		this.banco = banco;
 	}
 
 	public Cliente getCliente() {
 		return cliente;
 	}
 
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
 
 	public String getNumero() {
 		return numero;
 	}
 
-	public void setNumero(String numero) {
-		this.numero = numero;
-	}
 
 	public void depositar(double valor) {
 		this.saldo += valor;
