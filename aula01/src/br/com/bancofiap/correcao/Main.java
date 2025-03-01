@@ -13,6 +13,8 @@ public class Main {
 		Cliente clienteEspecial = new Cliente();
 		clienteEspecial.setNome("Fernando");
 		
+		Conta contaComum = new Conta(bancoFiap, clienteEspecial, null);
+		
 		Conta conta = bancoFiap.criar("1234", cliente, 100.00);
 		
 		ContaEspecial contaEspecial = bancoFiap.criar("1657", clienteEspecial, 1000, 100.00);

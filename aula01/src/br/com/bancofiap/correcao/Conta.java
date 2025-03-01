@@ -7,6 +7,13 @@ public class Conta {
 	private String numero;
 	private double saldo = 0.0;
 	
+	public Conta(Banco banco, Cliente cliente, String numero) {
+		super();
+		this.banco = banco;
+		this.cliente = cliente;
+		this.numero = numero;
+	}
+	
 	public Conta(Banco banco, Cliente cliente, String numero, double saldo) {
 		super();
 		this.banco = banco;
