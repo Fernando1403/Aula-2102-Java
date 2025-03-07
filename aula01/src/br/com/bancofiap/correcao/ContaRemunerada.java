@@ -22,4 +22,15 @@ public class ContaRemunerada extends Conta{
 	public double obterSaldo() {
 		return this.saldoRemunerado;
 	}
+	
+	public String toString() {
+		
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("Conta remunerada \n" );
+		sb.append("------------------------------");
+		sb.append(super.toString());
+		
+		return sb.toString();
+	}
 }

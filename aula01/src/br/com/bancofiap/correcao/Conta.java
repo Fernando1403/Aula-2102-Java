@@ -2,13 +2,15 @@ package br.com.bancofiap.correcao;
 
 public class Conta {
 	
+	private Agencia agencia;
 	private Banco banco;
 	private Cliente cliente;
 	private String numero;
 	private double saldo = 0.0;
 	
-	public Conta(Banco banco, Cliente cliente, String numero) {
+	public Conta(Agencia agencia, Banco banco, Cliente cliente, String numero) {
 		super();
+		this.agencia = agencia;
 		this.banco = banco;
 		this.cliente = cliente;
 		this.numero = numero;
@@ -43,5 +45,20 @@ public class Conta {
 	public double obterSaldo() {
 		return this.saldo;
 	}
+
+	@Override
+	public String toString() {
+		
+		StringBuilder sb = new StringBuilder();
+		
+		//sb.append(this.agencia.getBanco().getNome() + "\n");
+		//sb.append(this.agencia.getNumero() + this.agencia.getNome() + "\n");
+		sb.append(this.numero + "\n");
+		sb.append(this.cliente.getNome());
+		sb.append("------------------------------");
+		
+		return sb.toString();
+	}
+
 	
 }

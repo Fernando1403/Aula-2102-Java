@@ -16,4 +16,18 @@ public class ContaEspecial extends Conta{
 	public double obterSaldo() {
 		return super.obterSaldo() + this.limite;
 	}
+
+	@Override
+	public String toString() {
+		
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("Conta especial \n" );
+		sb.append("------------------------------");
+		sb.append(super.toString());
+		
+		return sb.toString();
+	}
+	
+	
 }
